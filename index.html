@@ -61,7 +61,7 @@
                     }
                 });
                 const data = await res.json();
-                console.log(data)
+                console.log(data);
                 data.forEach(fileName => {
                     if(/(.jpg|.png|.jpeg|.gif|.webp)/g.test(fileName)) 
                         container.innerHTML += `<img src="./${localStorage.getItem('path')}/${fileName}" class="imgFile">`;                   
@@ -87,6 +87,7 @@
             if(e.target.id === 'modal') {
                 modal.style.display = "none";
                 document.body.style.overflowY = '';
+                imgPreview.src = "";
             }
         }
     </script>
